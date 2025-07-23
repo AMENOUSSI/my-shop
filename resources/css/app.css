@@ -33,7 +33,7 @@
  
 
 @plugin "daisyui" {
-  themes: lemonade --default, abyss --prefersdark, cupcake, dracula, garden, fantasy, forest,rero;
+  themes: cupcake --default, abyss --prefersdark, cupcake, dracula, garden, fantasy, forest,rero;
 }
 
 /* maryUI */

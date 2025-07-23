@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" data-theme="cymak">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" data-theme="cupcake">
 
 <head>
     <meta charset="utf-8">
@@ -49,7 +49,7 @@
                 @endif
 
                 <x-menu-item title="Dashboard" icon="o-sparkles" link="/" />
-                <x-menu-item title="Ventes" icon="o-power" link="/" />
+                <x-menu-item title="Ventes" icon="o-bars-3" link="/sales" />
                 
 
                 <x-menu-item title="Depenses" icon="o-plus" link="/" />
