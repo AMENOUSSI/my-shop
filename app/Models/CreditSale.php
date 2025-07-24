@@ -4,11 +4,15 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Sale extends Model
+class CreditSale extends Model
 {
     protected $fillable = [
-        'date',
+        'client_name',
+        'client_phone',
+        'description',
         'amount',
+        'date',
+        'is_paid',
         'user_id',
     ];
 

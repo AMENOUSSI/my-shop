@@ -11,15 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('unpaid_sales', function (Blueprint $table) {
+        Schema::create('credit_sales', function (Blueprint $table) {
             $table->id();
-            $table->decimal('amount');
-            $table->string('client');
-            $table->string('description')->nullable();
-            $table->enum('status', ['paid','unpaid']);
-            $table->string('telephone');
+            $table->string('client_name');
+            $table->string('client_phone')->nullable();
+            $table->text('description')->nullable(); // produits achetés
+            $table->decimal('amount', 10, 2);
+            $table->date('date');
+            $table->boolean('is_paid')->default(false);
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
-
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('unpaid_sales');
+        Schema::dropIfExists('credit_sales');
     }
 };

@@ -19,10 +19,8 @@ return new class extends Migration
             $table->decimal('unit_selling_price', 15, 2);
             $table->decimal('unit_purchasing_price', 15, 2);
             $table->decimal('total_selling_price', 15, 2);
-            $table->doubdecimalle('interest', 15, 2);
+            $table->decimal('interest', 15, 2);
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
-
-            $table->id();
             $table->timestamps();
         });
     }

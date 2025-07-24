@@ -52,11 +52,8 @@ class Welcome extends Component
             ['id' => 1, 'name' => 'Mary', 'email' => 'mary@mary-ui.com', 'age' => 23],
             ['id' => 2, 'name' => 'Giovanna', 'email' => 'giovanna@mary-ui.com', 'age' => 7],
             ['id' => 3, 'name' => 'Marina', 'email' => 'marina@mary-ui.com', 'age' => 5],
-        ])
-            ->sortBy([[...array_values($this->sortBy)]])
-            ->when($this->search, function (Collection $collection) {
-                return $collection->filter(fn(array $item) => str($item['name'])->contains($this->search, true));
-            });
+        ]);
+            
     }
 
     public function render()
